@@ -2,7 +2,7 @@
 My own custom ToolTip/MsgBox combo for debugging AHK scripts that I eventually wrote since trying to debug with MsgBox stops everything until 'Okay' is pressed, ToolTips have to be started and stopped, and the custom TT code someone wrote had some minor annoyances that ticked me off enough to write something I'd be more comfortable with...
 
 # Important Note!
-This is intended for personal use only, hence the lack of error checking and flair. I also use a dark theme so some modification may be needed for other theme styles - again, personal use, so it's a bit of a bodge-job.
+This is intended for personal use only, hence the lack of error checking and flair. I also use a dark theme so some modification may be needed for other theme styles - again, personal use, so it's a bit of a bodge-job although Msb-Commented.ahk has line-by-line descriptions of what does what, although it needs updating and formatting correctly (but you can get the gist of it all).
 
 # Installation:
 Either #Include the Msb.ahk and/or Err.ahk in your code or drop whichever into your Documents\AutoHotKey\Lib folder and call it normally in your code.
