@@ -25,4 +25,4 @@ xMid(default: Screen Centre)
 yMid(default: Screen Centre)
  - Vertical position to display the message - currently only supports being centred on that point rather than the topmost edge.
  
-Can only display one message at a time, the original being overwritten by the next (hence why I made Err.ahk, which is the same code but with Red text).
+Can only display one message at a time, the original being overwritten by the next and I have neither the time nor the patience to work out how to implement that level of migraine promotion (hence why I made Err.ahk, which is the same code but with Red text).
