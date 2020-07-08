@@ -4,12 +4,12 @@ My own custom ToolTip/MsgBox combo for debugging AHK scripts - intended for pers
 # Important Note!
 I primarily use a dark theme so some modification may be needed for other theme styles - again, personal use, so it's a bit heavy-handed.
 
-Installation:
+# Installation:
 Either #Include the Msb.ahk and/or Err.ahk in your code or drop whichever into your Documents\AutoHotKey\Lib folder and call it normally in your code.
 For correct formatting, download and install the ProFontWindows.ttf font file too (Right-Click>Install) or change the metrics/font reference in the ahk files themselves for whatever monospaced font you prefer.
 
-Use:
-# Msb(Text, Type/Dur, xMid, yMid)
+# Use: Msb(Text, Type/Dur, xMid, yMid)
+
 Text(default: '! Empty !')
  - Obvious really, uses standard formatting rules.
  - Defaults to '! Empty !' since being passed a null variable may cause the user to think it's stopped working otherwise.
