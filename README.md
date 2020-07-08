@@ -1,8 +1,8 @@
-# MeSsageBox
+# MeSsageBox/ToolTip Combo
 My own custom ToolTip/MsgBox combo for debugging AHK scripts - intended for personal use only, hence the lack of error checking and flair.
 
 Installation:
-Either #Include the Msb.ahk and/or Err.ahk in your code or drop them into your Documents\AuotHotKey\Libs folder and call it normally in your code.
+Either #Include the Msb.ahk and/or Err.ahk in your code or drop whichever into your Documents\AuotHotKey\Lib folder and call it normally in your code. For correct formatting, download and install the ProFontWindows.ttf file too (Right-Click>Install) or change the metrics in the ahk files themselves for whatever monospaced font you prefer.
 
 Use:
 # Msb(Text, Type/Dur, xMid, yMid)
