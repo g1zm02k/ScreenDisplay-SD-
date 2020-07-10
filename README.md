@@ -22,9 +22,11 @@ Type/Dur(default: Sleep/2sec)
  - Message can also be dismissed early by clicking on it.
  
 xMid(default: Screen Centre)
- - Horizontal position to display the message - currently only supports being centred on that point rather than the leftmost edge.
+ - Horizontal position to display the message.
+ - Will centre the window on the x coordinate unless preceeded by a '0', in which case the x coordinate refers to the leftmost edge.
  
 yMid(default: Screen Centre)
- - Vertical position to display the message - currently only supports being centred on that point rather than the topmost edge.
- 
+ - Vertical position to display the message.
+ - Will centre the window on the y coordinate unless preceeded by a '0', in which case the y coordinate refers to the topmost edge.
+
 Can only display one message at a time, the original being overwritten by the next and I have neither the time nor the patience to work out how to implement that level of migraine promotion (hence why I made Err.ahk, which is the same code but with Red text).
