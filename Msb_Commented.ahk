@@ -37,15 +37,17 @@
   
   w:=c*12+6                    ;NumChars * FontWid + WinBorder = Width
   h:=l*24-2                    ;NumLines * FontHgt + WinBorder = Height
-  x:=x-w/2                     ;xCentre = Width/2
-  y:=y-h/2                     ;yCentre = Height/2
+  if !(RegExMatch(x,"0")=1)    ;If x value was preceeded by a '0'
+    x:=x-w/2                   ;    xPos set to centre of message box
+  if !(RegExMatch(y,"0")=1)    ;If y value was preceeded by a '0'
+    y:=y-h/2                   ;    yPos set to centre of message box
   
-  Gui Msb:New, -SysMenu +AlwaysOnTop +ToolWindow -Caption +Owner  ;Make Gui
+  Gui Msb:New, +AlwaysOnTop +ToolWindow -Caption  ;Make GUI and name it Msb
   Gui Font, s18, ProFontWindows                   ;Set large, monospace font
   Gui Add, Text, x4 y0 w%w% h%h%, % m             ;Set text-box element size
   Gui Show, NoActivate x%x% y%y% w%w% h%h%, wMsb  ;Set main Gui size/position
 
-  if (s=1)                     ;If stored '0' position(s) is first character
+  if (s=1)                     ;If duration flag set for SetTimer 's' use
     SetTimer tMsb, -%d%        ;    use timer (execution continues)
   else                         ;  otherwise
   {

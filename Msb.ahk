@@ -21,8 +21,12 @@
 			Break
 		}
 	}
-	w:=c*12+6, h:=l*24-2, x:=x-w/2, y:=y-h/2
-	Gui Msb:New, -SysMenu +AlwaysOnTop +ToolWindow -Caption +Owner
+	w:=c*12+6, h:=l*24-2
+	if !(RegExMatch(x,"0")=1)
+		x:=x-w/2
+	if !(RegExMatch(y,"0")=1)
+		y:=y-h/2
+	Gui Msb:New, +AlwaysOnTop +ToolWindow -Caption
 	Gui Font, s18 cLime, ProFontWindows
 	Gui Add, Text, x4 y0 w%w% h%h% gMsbLMB, % m
 	Gui Show, NoActivate x%x% y%y% w%w% h%h%, wMsb
