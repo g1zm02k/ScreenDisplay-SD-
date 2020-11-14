@@ -1,4 +1,4 @@
-# SD - Screen Display/ToolTip Combo (original name: MSB - MeSsageBox)
+# SD - Screen Display/ToolTip Combo (original name: MSB)
 My own custom ToolTip/MsgBox combo for debugging AHK scripts that I eventually wrote since trying to debug with MsgBox stops everything until 'Okay' is pressed, ToolTips have to be started and stopped, and the custom TT code someone wrote had some minor annoyances that ticked me off enough to write something I'd be more comfortable with...
 
 # Important Note!
@@ -7,7 +7,7 @@ This is intended for personal use only, hence the lack of error checking and fla
 'Msb-Commented.ahk' (original function name) has line-by-line descriptions of what does what so you can easily modify it yourself if you want to!
 
 # Installation:
-Either #Include the SD.ahk's full path (and/or Err.ahk/Msb.ahk) in your code or drop whichever into your Documents\AutoHotKey\Lib folder and call it normally in your code (no need for #Include).
+Either #Include the SD.ahk's full path (and/or Err.ahk) in your code or drop whichever into your Documents\AutoHotKey\Lib folder and call it normally in your code (no need for #Include).
 For correct formatting, download and install the ProFontWindows.ttf font file too (Right-Click>Install) or change the metrics/font reference in the ahk files themselves for whatever monospaced font you prefer (I may implement standard font metrics but again, it's not high on my list since it does what I need it to).
 
 # Use: SD(Text[, Type/Dur, xMid, yMid])
@@ -20,6 +20,7 @@ Type/Dur(default: Sleep/2sec)
  - Time to display (in seconds - decimal fractions can also be used).
  - Uses the Sleep command unless preceeded by a '0', in which case it will use SetTimer (e.g. 09=Timer/9s or .4=Sleep/400ms).
  - Message can also be dismissed early by clicking on it (Sleep will still pause the program though until I work out a suitable fix).
+ - For the uninitiated, the difference between Sleep and Timer is that Sleep will pause the current thread until the time is up but the Timer will allow code to continue execution (e.g. Setting three Timers will only show the last message since the continuing program flow will overwrite the first two).
  
 xMid(default: Screen Centre)
  - Horizontal position to display the message.
